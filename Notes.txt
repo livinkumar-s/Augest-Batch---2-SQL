@@ -1,0 +1,92 @@
+Data --> raw fact, piece of info
+
+Database
+--------
+>> Organized Collection of data. Easy to manipulate the data.
+
+Relational Database Manamegent System 
+----------------------------------------
+> data will be stored in form of Tables(rows and columns).
+> SQL is must.
+> Ex: MySQL, PostgreSQL, Oracle.....
+
+Non Relational Database Management System 
+---------------------------------------------
+> data will be stored in form of Docs(BSON --> Binary JSON)
+> MongoDB, MariaDB.
+
+SQL - Structured Query Language
+---
+Syntax:
+---------
+>> It is case-insensitive.
+>> DELIMITER ; is must.
+
+MySQL 
+----------
+>> Open source.
+Database --> Multiple Tables --> Data
+(Schema)
+
+Entity --> Real time Object. Cat 
+Attributes --> informations. (name, gender, color, owner)
+
+Table --> CatInfo --> Name, Sex, Color, OwnerName
+
+MySQL Server --> Data Stored, Query are executed.
+MySQL Workbench --> IDE for MySQL
+MySQL Shell --> CLI for MySQL
+
+Datatypes 
+------------
+Numeric datatypes 
+-------------------
+INT --> whole numbers.
+FLOAT --> Decimal Numbers.
+BIGINT --> Large Whole Numbers 
+DOUBLE --> Large Decimal Numbers
+
+String datatypes 
+-------------------
+CHAR(l) --> fixed length char string. Ex: CHAR(5) --> "Hello", "Hi Hi", "Hi", "Anitha" 
+VARCHAR(l) --> variable length char string. Ex: VARCHAR(5) --> "Hi","Hello", "Excellent"
+TEXT --> paragraph 
+
+Boolean 
+---------
+BOOLEAN --> 1 or 0
+
+DATE and TIME 
+--------------
+DATE --> "yyyy-mm-dd"
+TIME --> "HH:MM:SS"
+DATETIME --> Both
+
+Constraints 
+---------------
+Primary Key ---> identify the records uniquely. no duplicates, no nulls(empty cell). (gets indexed defaultly)
+
+Queries 
+---------
+To create a Database ---> CREATE DATABASE dbname;
+To Select database --> USE dbname;
+To create table --> CREATE TABLE tbname (
+    col dt constraint,
+    col dt constraint,
+    col dt constraint,
+    col dt constraint
+    .
+    .
+);
+
+Student --> name, age 
+-----------------------
+
+name     age   id(pk)
+----------------------
+ken       21   1
+ben       34   2
+qwen      18   3
+ken       34   4
+
+
