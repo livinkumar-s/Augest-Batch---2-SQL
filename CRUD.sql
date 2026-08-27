@@ -10,3 +10,5 @@ UPDATE actor SET name="Dhruv" WHERE id=1;
 UPDATE actor SET name="Dhruv vikram", age=27 WHERE id=1;
 
 DELETE FROM actor WHERE id=8;
+
+SET SQL_SAFE_UPDATES=1;
