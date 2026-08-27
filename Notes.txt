@@ -66,6 +66,18 @@ Constraints
 ---------------
 Primary Key ---> identify the records uniquely. no duplicates, no nulls(empty cell). (gets indexed defaultly)
 
+Operators 
+------------
+Comparison 
+-------------
+= equal  
+!=, <> not equal
+< lesser than   
+> greater than  
+<= lesser than or equal  
+>= greater than or equal 
+
+
 Queries 
 ---------
 To create a Database ---> CREATE DATABASE dbname;
@@ -79,14 +91,23 @@ To create table --> CREATE TABLE tbname (
     .
 );
 
-Student --> name, age 
------------------------
+To insert data --> INSERT INTO tbname (col details) VALUES (),(),().....
+To Retrive data --> SELECT (col details(*)) FROM tbname;
+To Update a record --> UPDATE tbname SET col=val;
+To delete a record --> DELETE FROM tbname;
 
-name     age   id(pk)
-----------------------
-ken       21   1
-ben       34   2
-qwen      18   3
-ken       34   4
+Safe update mode --> You can update/delete only one record in one go. Where clause is must. condition should depend on PK.
 
+CRUD 
+-----
+CREATE --> INSERT
+READ --> SELECT
+UPDATE --> UPDATE
+DELETE --> DELETE
+
+WHERE 
+-----
+>> Filters the records.
+Ex: select,update,delete.... WHERE cond;
+condition --> expression that returns a boolen.
 
