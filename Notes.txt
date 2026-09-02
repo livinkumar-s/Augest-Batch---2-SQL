@@ -150,3 +150,37 @@ WHERE
 Ex: select,update,delete.... WHERE cond;
 condition --> expression that returns a boolen.
 
+Functions 
+----------
+>> Functions are predefined operations. it takes input, processes it and returns output.
+
+Numeric Functions
+-------------------
+ROUND(dec,pos) --> round it off to the nearest integer. 21.2343 --> 21
+FLOOR(dec) --> floor value
+CEIL(dec)
+ABS(num)
+MOD(num1,num2)
+SQRT(num)
+POWER(num1,num2)
+
+Strings 
+----------
+CONCAT(str1,str2,str2.....)
+LENGTH(str)
+UPPER(str)
+LOWER(str)
+SUBSTRING(str, start, len) "Hello world" --> "Hello"
+REPLACE(str, old, new) "Hello world" --> "Hi World"
+TRIM(str)
+LTRIM(str)
+RTRIM(str)
+REVERSE(str)
+REPEAT(str,num)
+
+DATE TIME 
+------------
+CURDATE()
+CURTIME()
+NOW()
+DATEDIFF(d1,d2)
