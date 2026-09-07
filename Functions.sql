@@ -49,3 +49,7 @@ SELECT CONCAT("His name is ",upper(name),". He is ",age,".")
 as details from actor;
 
 SELECT * FROM actor;
+
+SELECT CONCAT("His name is ", UPPER(name), ". He is ", age, ".") 
+AS details
+FROM actor;
