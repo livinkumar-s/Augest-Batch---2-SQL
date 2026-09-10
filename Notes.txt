@@ -79,6 +79,13 @@ ENUM (v1,v2,v3) --> GENDER ("male","female")
 Actions 
 ----------
 
+ON DELETE Action
+ON UPDATE Action
+
+CASCADE--> parent rec deleted, updated --> automatically updates or deletes the child records
+SET NULL
+RESTRICT 
+NO ACTION
 
 Operators 
 ------------
@@ -232,6 +239,8 @@ Ex: SELECT * FROM tb1 RIGHT JOIN tb2 ON relationship
 UNION
 SELECT * FROM tb1 RIGHT JOIN tb2 ON relationship
 
+Cross Join 
+-----------
 
 Cricketer 
 ----------------
