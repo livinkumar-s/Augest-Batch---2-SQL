@@ -76,6 +76,9 @@ CHECK --> insert records conditionally. CHECK (cond)
 AUTO_INCREMENT --> generates sequence of numbers record by record.
 ENUM (v1,v2,v3) --> GENDER ("male","female")
 
+Actions 
+----------
+
 
 Operators 
 ------------
@@ -155,6 +158,10 @@ READ --> SELECT
 UPDATE --> UPDATE
 DELETE --> DELETE
 
+ALTER 
+---------
+
+
 WHERE 
 -----
 >> Filters the records.
@@ -196,6 +203,36 @@ CURTIME()
 NOW()
 DATEDIFF(d1,d2)
 
+Join 
+-------
+>> Joins are used to combine 2 or more tables.
+
+Inner Join 
+------------
+>> It retrives only the matched records from both tables.
+>> unmatched records will be ignored.
+Ex: SELECT * FROM tb1 INNER JOIN tb2 ON relationship;
+
+Left Outer Join 
+---------------
+>> It retrives all from left table.
+>> only matching records from right table.
+Ex: SELECT * FROM tb1 LEFT JOIN tb2 ON relationship;
+
+Right Outer Join 
+---------------
+>> It retrives all from right table.
+>> only matching records from left table.
+Ex: SELECT * FROM tb1 RIGHT JOIN tb2 ON relationship;
+
+Full Outer Join 
+---------------
+>> It retrives all from both tables.
+Ex: SELECT * FROM tb1 RIGHT JOIN tb2 ON relationship
+UNION
+SELECT * FROM tb1 RIGHT JOIN tb2 ON relationship
+
+
 Cricketer 
 ----------------
 id  name                mailId                          c   a
@@ -205,16 +242,16 @@ id  name                mailId                          c   a
 3	Jacques Kallis	    jacques.kallis@example.com	    100	0
 4	Ricky Ponting	    ricky.ponting@example.com	    100	0
 5	MS Dhoni	        ms.dhoni@example.com	        100	0
-6	Virat Kohli	        virat.kohli@example.com	        50	1
 7	AB de Villiers	    ab.de.villiers@example.com	    50	1
 8	Kane Williamson	    kane.williamson@example.com	    50	1
 9	Rohit Sharma	    hitman@example.com	            52	1
 
 Jersey 
 ----------
-id  jersey  playerId(fk --> Cricketer(id))
+id  name  playerId(fk --> Cricketer(id))
 ---------------------
-1   18       6
-2   7        5
-3   9        2
-4   999      19(invalid)
+1	RCB	    6
+2	MI	    1
+3	RCB	    7
+4	CSK	    5
+
