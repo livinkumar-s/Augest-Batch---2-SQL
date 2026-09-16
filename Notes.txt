@@ -240,9 +240,27 @@ UNION
 SELECT * FROM tb1 RIGHT JOIN tb2 ON relationship
 
 Cross Join 
------------
 
-Cricketer 
+Aggregation and Grouping
+--------------------------
+>> Performing operation on a group of rows and producing a single result.
+
+COUNT() ---> no of records in a table. no of values in a col.
+SUM() --> sum of a numeric col.
+AVG() --> average of a numeric col.
+MAX()
+MIN()
+
+Grouping 
+---------
+GROUP BY 
+>> combine rows having same value into groups
+Ex: SELECT aggrCol FROM tb GROUP BY col;
+
+WHERE --> Filteration with records 
+HAVING --> Filteration with Groups
+
+Cricketer   count(name) --> 8
 ----------------
 id  name                mailId                          c   a
 ----------------------------------------------------------------------
@@ -250,7 +268,7 @@ id  name                mailId                          c   a
 2	Brian Lara	        brian.lara@example.com	        100	0
 3	Jacques Kallis	    jacques.kallis@example.com	    100	0
 4	Ricky Ponting	    ricky.ponting@example.com	    100	0
-5	MS Dhoni	        ms.dhoni@example.com	        100	0
+5	null	            ms.dhoni@example.com	        100	0
 7	AB de Villiers	    ab.de.villiers@example.com	    50	1
 8	Kane Williamson	    kane.williamson@example.com	    50	1
 9	Rohit Sharma	    hitman@example.com	            52	1
@@ -264,3 +282,18 @@ id  name  playerId(fk --> Cricketer(id))
 3	RCB	    7
 4	CSK	    5
 
+
+
+name   avg(price)
+----------------------
+*      ---
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
