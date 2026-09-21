@@ -260,40 +260,26 @@ Ex: SELECT aggrCol FROM tb GROUP BY col;
 WHERE --> Filteration with records 
 HAVING --> Filteration with Groups
 
-Cricketer   count(name) --> 8
-----------------
-id  name                mailId                          c   a
-----------------------------------------------------------------------
-1	Sachin Tendulkar	sachin.tendulkar@example.com	100	0
-2	Brian Lara	        brian.lara@example.com	        100	0
-3	Jacques Kallis	    jacques.kallis@example.com	    100	0
-4	Ricky Ponting	    ricky.ponting@example.com	    100	0
-5	null	            ms.dhoni@example.com	        100	0
-7	AB de Villiers	    ab.de.villiers@example.com	    50	1
-8	Kane Williamson	    kane.williamson@example.com	    50	1
-9	Rohit Sharma	    hitman@example.com	            52	1
+SubQueries 
+--------------
+>> A query written inside another query.
+(nested Query)(inner query)
 
-Jersey 
-----------
-id  name  playerId(fk --> Cricketer(id))
+Ex: main query......(SubQueriy)....
+
+>> SubQuery get executed first.
+>> main qury use the result from SubQuery.
+
+Single Row SubQuery
 ---------------------
-1	RCB	    6
-2	MI	    1
-3	RCB	    7
-4	CSK	    5
+>> SubQuery produces 1 row.
 
-
-
-name   avg(price)
+Multi Row Subquery 
 ----------------------
-*      ---
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
+>> subquery returns multiple rows.
+ALL/ANY
+IN/NOT IN
+
+Correlated Subquery 
+----------------------
+>> inner query depends on outer. outer query depends on inner.
