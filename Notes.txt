@@ -138,6 +138,12 @@ LIMIT/OFFSET
 >> limit the records.
 >> offset skip first few records.
 
+DDL --> Data Defenition Languages --> CREATE, ALTER, DROP, TRUNCATE...
+DML --> Data Manipulation Lang --> INSERT, UPDATE, DELETE.
+DQL --> Data Query Language --> SELECT 
+TCL --> Transaction Control Language --> START TRANSACTION, COMMIT.....
+DCL --> Data Control Language --> control the DB access (GRANT, REVOKE)
+
 Queries 
 ---------
 To create a Database ---> CREATE DATABASE dbname;
@@ -167,7 +173,20 @@ DELETE --> DELETE
 
 ALTER 
 ---------
+>> To modify the structure of an existing table.
+Syntax --> ALTER TABLE tbname action;
 
+To add a new Col --> ... ADD COLUMN col dt constraint;
+To add a new Cols --> ... ADD COLUMN col dt constraint, ADD COLUMN col...;
+To Modify a column --> .. MODIFY COLUMN col dt cons;
+To Change a column --> ... CHANGE COLUMN col newName dt const;
+To Rename a column --> ... RENAME COLUMN col TO new;
+To Drop a column --> ... DROPN COLUMN colName;
+
+To Reaname a table --> ... RENAME TO newname;
+To Drop a table --> DROP TABLE tbname;
+To Truncate a table --> TRUNCATE TABLE tbname;
+To drop a DB --> DROP DATABASE dbname;
 
 WHERE 
 -----
@@ -283,3 +302,19 @@ IN/NOT IN
 Correlated Subquery 
 ----------------------
 >> inner query depends on outer. outer query depends on inner.
+
+Transactions 
+-----------------
+>> executing multiple DML queries as single unit.
+>> START TRANSACTION;
+COMMIT --> saving the changes permanantly.
+ROLLBACK --> reverse the stagged changes
+AUTOCOMMIT
+SAVEPOINT 
+
+ACID Properties 
+------------------
+Atomicity --> either all or nothing
+Consistancy --> db always remains with valid data
+Isolation ---> concurrent transactions will be isolated from one another;
+Durability --> Once the transaction  has been committes the changes persist
