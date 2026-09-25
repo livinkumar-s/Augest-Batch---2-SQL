@@ -32,3 +32,17 @@ INSERT INTO bakkacc (accNum, name, balance) VALUES ('A00001', 'John Doe', 1000),
 ('A00003', 'Alice Johnson', 2000),
 ('A00004', 'Bob Brown', 2500),
 ('A00005', 'Charlie Davis', 3000);
+
+alter table bakkacc rename to bankacc;
+
+select * from bankacc;
+
+START TRANSACTION;
+UPDATE bankacc set balance=balance-50 where accNum="A00001";
+UPDATE bankacc set balance=balance+50 where accNum="A00002";
+SAVEPOINT s1;
+UPDATE bankacc set balance=balance-100 where accNum="A00003";
+UPDATE bankacc set balance=balance+100 where accNum="A00004";
+
+ROLLBACK to s1;
+commit;

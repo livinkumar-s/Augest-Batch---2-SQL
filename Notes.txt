@@ -318,3 +318,15 @@ Atomicity --> either all or nothing
 Consistancy --> db always remains with valid data
 Isolation ---> concurrent transactions will be isolated from one another;
 Durability --> Once the transaction  has been committes the changes persist
+
+
+View  
+------
+>> These are virtual tables based on the SELECT queries.
+>> does not have actual data
+
+To create View --> CREATE VIEW viewName AS SELECT......;
+To Modify a view --> CREATE OR REPLACE VIEW viewname AS SELECT....;
+
+>> Security 
+>> Reusability
